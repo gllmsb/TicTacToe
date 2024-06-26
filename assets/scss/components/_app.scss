@@ -15,6 +15,7 @@
   h1 {
     font-family: $font;
     color: $yellow;
+    font-size: 2rem;
     animation: float 3s ease-in-out infinite;
     @include text-shadow;
   }
@@ -25,8 +26,8 @@
     justify-content: center;
 
     .cell {
-      height: 8rem;
-      width: 8rem;
+      height: 7rem;
+      width: 7rem;
       background-color: transparent;
       border: none;
       font-weight: 600;
@@ -71,6 +72,21 @@
     &:hover {
       background-color: $bg;
       color: $red;
+    }
+  }
+
+  @media (max-width: 390px) {
+    h1 {
+      font-size: 1rem;
+    }
+
+    #board {
+      grid-gap: 0.5rem; 
+      .cell {
+        height: 5rem;
+        width: 5rem; 
+        font-size: 2.5rem; 
+      }
     }
   }
 }

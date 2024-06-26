@@ -13,6 +13,7 @@
 #app h1 {
   font-family: "Press Start 2P", system-ui;
   color: #FFDB58;
+  font-size: 2rem;
   animation: float 3s ease-in-out infinite;
   text-shadow: -2px 6px 8px rgba(0, 0, 0, 0.5);
 }
@@ -22,8 +23,8 @@
   justify-content: center;
 }
 #app #board .cell {
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   background-color: transparent;
   border: none;
   font-weight: 600;
@@ -62,6 +63,19 @@
 #app #reset:hover {
   background-color: #1F2030;
   color: #FF4040;
+}
+@media (max-width: 390px) {
+  #app h1 {
+    font-size: 1rem;
+  }
+  #app #board {
+    grid-gap: 0.5rem;
+  }
+  #app #board .cell {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+  }
 }
 
 @keyframes float {
