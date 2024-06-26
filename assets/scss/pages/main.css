@@ -86,13 +86,28 @@
     transform: translateY(0);
   }
 }
-body,
-html {
+body {
   margin: 0;
   background-color: #1F2030;
   font-family: "Press Start 2P", system-ui;
+  background-image: url(/assets/images/bg.jpg);
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body,
+  html {
+    background-image: url("/assets/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
 }/*# sourceMappingURL=main.css.map */

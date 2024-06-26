@@ -5,14 +5,28 @@
 //*COMPONENTS
 @use '../components/app';
 
-body,
-html {
+body{
   margin: 0;
   background-color: $bg;
   font-family: $font;
+  background-image: url(/assets/images/bg.jpg);
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 * {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  body,
+  html {
+    background-image: url('/assets/images/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+}
