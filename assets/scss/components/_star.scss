@@ -1,0 +1,70 @@
+.star {
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    animation: sparkle 2s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  
+  #star1 {
+    top: 10%;
+    left: 20%;
+  }
+  
+  #star2 {
+    top: 20%;
+    left: 88%;
+  }
+  
+  #star3 {
+    top: 50%;
+    left: 66%;
+  }
+  
+  #star4 {
+    top: 70%;
+    left: 10%;
+  }
+  
+  #star5 {
+    top: 90%;
+    left: 80%;
+  }
+
+  @media (max-width: 768px) { 
+    #star1 {
+      top: 5%;
+      left: 80%;
+    }
+  
+    #star2 {
+      top: 20%;
+      left: 10%;
+    }
+  
+    #star3 {
+      top: 35%;
+      left: 70%;
+    }
+  
+    #star4 {
+      top: 64%;
+      left: 15%;
+    }
+  
+    #star5 {
+      top: 70%;
+      left: 87%;
+    }
+  }

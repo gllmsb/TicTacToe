@@ -4,6 +4,7 @@
 
 //*COMPONENTS
 @use '../components/app';
+@use '../components/star';
 
 body{
   margin: 0;
@@ -14,6 +15,7 @@ body{
   position: center;
   background-repeat: no-repeat;
   height: 100%;
+  position: relative;
 }
 
 * {
