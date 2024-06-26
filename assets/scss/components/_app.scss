@@ -2,47 +2,87 @@
 @use '../helpers/variables' as *;
 
 #app {
-    max-width: 500px;
-    width: 90vw;
-    margin: 0 auto;
-    margin-top: 4rem;
-    padding: 2rem 0;
-    font-family: sans-serif;
-    text-align: center;
-    background-color: $light;
-  
-    #board {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      justify-content: center;
-  
-      .cell {
-        height: 4rem;
-        width: 4rem;
-        background-color: transparent;
-        border: none;
-        font-weight: 600;
-        font-size: 50px;
-        position: relative;
-  
-        &::after {
-          content: attr(data-content);
-        }
-      }
-  
-      [data-content="X"] {
-        color: $red;
-      }
-  
-      [data-content="O"] {
-        color: $cyan;
-      }
-  
-      [data-row="0"],
-      [data-row="2"],
-      [data-col="0"],
-      [data-col="2"] {
-        @include custom-border;
+  max-width: 500px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding: 2rem 0;
+  font-family: $font;
+  text-align: center;
+  color: white;
+  background-color: $secondary;
+
+  h1 {
+    font-family: $font;
+    color: $yellow;
+    animation: float 3s ease-in-out infinite;
+    @include text-shadow;
+  }
+
+  #board {  
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+
+    .cell {
+      height: 8rem;
+      width: 8rem;
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      font-size: 50px;
+      font-family: $font;
+      position: relative;
+
+      &::after {
+        content: attr(data-content);
       }
     }
+
+    [data-content="X"] {
+      color: $red;
+      @include text-shadow; 
+    }
+
+    [data-content="O"] {
+      color: $cyan;
+      @include text-shadow;
+    }
+
+    [data-row="0"],
+    [data-row="2"],
+    [data-col="0"],
+    [data-col="2"] {
+      @include custom-border;
+    }
   }
+
+  #reset {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $bg;
+    color: $yellow;
+    border: none;
+    font-family: $font;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: $bg;
+      color: $red;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
