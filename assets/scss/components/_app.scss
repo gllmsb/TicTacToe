@@ -75,18 +75,15 @@
     }
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 768px) {
     h1 {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
-
-    #board {
-      grid-gap: 0.5rem; 
-      .cell {
-        height: 5rem;
-        width: 5rem; 
-        font-size: 2.5rem; 
-      }
+    
+    .cell {
+      height: 4rem;
+      width: 4rem; 
+      font-size: 2.5rem; 
     }
   }
 }
